@@ -1,80 +1,54 @@
-# Victorian Road Crash Analysis | Tableau Dashboard
+# Victorian Road Crash Analysis
 
-An interactive data visualisation project examining road crash patterns in Victoria, Australia, using Tableau.
+An interactive Tableau dashboard examining road crash patterns involving **cyclists, motorcyclists, and pedestrians across Victoria, Australia**. The dashboard combines geographic, temporal, environmental, and safety-related visualisations to help identify crash concentrations and support evidence-based road safety planning.
 
-Developed to support the identification and communication of road safety trends, this project demonstrates how visual analytics can help inform evidence-based transport planning and road safety decisions.
+The analysis explores Victorian crash records from 2012 onwards, allowing users to compare vulnerable road user groups and investigate how crash patterns vary by location, weather conditions, time of day, and protective equipment use.
 
-## Dashboard Preview
+Developed as an individual project for **GEOM90007 (Information Visualisation)**, Master of Computer Science, University of Melbourne.
+
+## Dashboard Overview
 
 ![Victorian Road Crash Dashboard](screenshots/dashboard-overview.png)
 
-*The dashboard provides a visual overview of selected Victorian road crash data.*
+The dashboard contains six complementary visualisations:
 
-## Project Overview
-
-Road crashes have significant implications for public safety, transport infrastructure, and communities.
-
-This project uses Victorian road crash data to develop a Tableau dashboard designed around a practical transport planning scenario: helping decision-makers investigate crash patterns and identify potential areas of concern.
-
-The dashboard applies principles of information visualisation, data graphics, and cartographic design to communicate information through a coherent visual interface.
-
-### Project Objectives
-
-- Explore Victorian road crash data through visualisation.
-- Identify relevant trends and patterns within the selected dataset.
-- Present information in an accessible and interpretable dashboard.
-- Demonstrate the application of information visualisation and dashboard design principles.
-- Support data-informed discussions about road safety.
-
-## Dashboard Features
-
-*To be updated after reviewing the completed Tableau workbook.*
-
-This section will document the actual visualisations, data dimensions, filters, and interactive functionality implemented in the dashboard.
-
-## Key Insights
-
-*To be completed using findings supported by the dashboard.*
-
-This section will summarise the most meaningful observations revealed by the visualisations, including their relevance to road safety decision-making.
-
-## Tools and Technologies
-
-| Technology | Purpose |
+| Visualisation | Purpose |
 |---|---|
-| Tableau | Data visualisation and dashboard development |
-| Tableau Packaged Workbook (.twbx) | Packaging and distributing the completed dashboard |
-| Git & GitHub | Version control, documentation, and project presentation |
+| **Road User Selector** | Select cyclists, motorcyclists, or pedestrians to explore their crash patterns. |
+| **Top LGAs** | Rank Victorian local government areas by recorded crash counts. |
+| **Weather Conditions** | Compare crash severity across different weather conditions. |
+| **Safety Compliance** | Examine protective equipment use, including seatbelts, helmets, and child restraints. |
+| **Crash Map** | Visualise the spatial distribution of crashes across Victoria. |
+| **Time Heatmap** | Identify crash concentrations by day of week and hour of day. |
 
-## Dataset
+The road user selector enables comparisons between vulnerable road user groups within the dashboard.
 
-**Source:** Victorian road crash dataset provided through the University of Melbourne's GEOM90007 Information Visualisation subject.
+## Key Findings
 
-**Context:** The dataset was supplied for an assignment based on a hypothetical Transport Victoria road safety analysis scenario.
+- **Geographic concentration** — Melbourne records the highest crash count among the displayed LGAs, followed by several metropolitan and regional areas.
+- **Weather patterns** — Clear weather accounts for a substantial share of recorded crashes. However, higher crash counts do not necessarily imply greater risk without accounting for traffic exposure.
+- **Temporal patterns** — The day-hour heatmap highlights concentrations during daytime and commuting periods, particularly on weekdays.
+- **Safety equipment** — Protective equipment usage varies across the recorded categories, offering a basis for examining road safety compliance.
+- **Spatial distribution** — Crash locations reveal geographic clustering, particularly around metropolitan Melbourne.
 
-The analysis uses selected information from the provided road crash dataset.
+These findings describe observed crash patterns rather than establishing causal relationships.
 
-**Data availability:** Public redistribution of the underlying course-provided dataset is subject to its applicable permissions and licensing conditions.
+## Visualisation Highlights
 
-## Getting Started
+- **Interactive road user selection** — Supports focused analysis of cyclists, motorcyclists, and pedestrians.
+- **Spatial visualisation** — Uses geographic crash locations to explore distributions across Victoria.
+- **Temporal heatmap** — Combines weekday and hourly dimensions to reveal patterns that are difficult to identify from individual records.
+- **Severity comparison** — Distinguishes fatal, serious injury, and other injury crashes using colour encoding.
+- **Comparative rankings** — Uses ordered bar charts to communicate differences between LGAs and safety equipment categories.
+- **Integrated dashboard design** — Brings multiple analytical perspectives together in a single Tableau interface.
 
-### Prerequisites
+## Data Source
 
-- Tableau Desktop (a compatible version capable of opening packaged workbooks)
+**Dataset:** Victorian road crash records, provided through the University of Melbourne for GEOM90007 Information Visualisation.
 
-### Instructions
+The dashboard uses a selected subset of available attributes, including road user categories, geographic locations, crash timing, weather conditions, severity, and protective equipment information.
 
-1. Clone the repository:
-
-   `git clone https://github.com/KarthikKannan1/victoria-road-crash-analysis.git`
-
-2. Navigate to the `dashboard` directory.
-
-3. Open `victoria-road-crash-dashboard.twbx` using Tableau Desktop.
-
-4. Explore the dashboard and its available visualisations.
-
-**Note:** The Tableau workbook is stored using Git Large File Storage (Git LFS). If cloning the repository, ensure Git LFS is installed and run `git lfs pull` if the workbook has not downloaded automatically.
+The underlying data was provided for academic use. Redistribution of the packaged dataset is subject to the applicable source permissions.
 
 ## Repository Structure
 
@@ -88,36 +62,45 @@ victoria-road-crash-analysis/
 └── README.md
 ```
 
-## Design Approach
+The Tableau packaged workbook is managed through **Git Large File Storage (LFS)** because of its size.
 
-The dashboard was developed with reference to established information visualisation principles, including:
+## Viewing the Dashboard
 
-- Selecting graphical representations appropriate to the underlying data.
-- Organising information into a coherent visual narrative.
-- Applying visual hierarchy to support readability.
-- Considering the interpretation of visual variables such as colour, position, and size.
-- Presenting information for an audience familiar with Victorian transport and geographic contexts.
+The project is distributed as a Tableau packaged workbook (`.twbx`).
 
-## Limitations and Future Improvements
+**Prerequisites:** Tableau Desktop and Git LFS for cloning the repository.
 
-This dashboard is an exploratory visualisation project rather than a predictive road safety model.
+1. Clone the repository:
 
-Patterns visible in crash data do not necessarily establish causal relationships.
+   `git clone https://github.com/KarthikKannan1/victoria-road-crash-analysis.git`
 
-Potential future improvements include incorporating additional contextual datasets, extending the analysis across different time periods, and enhancing dashboard interactions where appropriate.
+2. Navigate into the repository and download the LFS-managed workbook if necessary:
 
-## Academic Context
+   `git lfs pull`
 
-This project was developed as an **individual assessment** for:
+3. Open `dashboard/victoria-road-crash-dashboard.twbx` in Tableau Desktop.
 
-**GEOM90007 – Information Visualisation**  
-The University of Melbourne  
-Semester 2, 2026
+4. Use the dashboard's road user selector and visualisations to explore crash patterns.
 
-The project demonstrates the practical application of information visualisation, dashboard development, and cartographic design principles using Tableau.
+Alternatively, download the packaged workbook through GitHub.
+
+## Limitations
+
+- Crash counts are not normalised by population, traffic volume, or exposure, limiting direct comparisons of relative risk.
+- Geographic visualisations may exclude records with missing or invalid location information.
+- Associations between crash characteristics and outcomes do not establish causality.
+- The dashboard is intended for exploratory analysis, not crash prediction.
+
+## Academic Context & Usage
+
+This project was completed individually for **GEOM90007 – Information Visualisation**, Semester 2, 2026, at the University of Melbourne.
+
+The dashboard was developed for an academic scenario involving Transport Victoria and is not an official Transport Victoria product.
+
+The project is shared for portfolio and educational demonstration. No open-source licence is currently granted; reuse of the underlying data remains subject to its source permissions.
 
 ## Author
 
 **Karthik Kannan**
 
-[GitHub Profile](https://github.com/KarthikKannan1)
+[GitHub](https://github.com/KarthikKannan1)
